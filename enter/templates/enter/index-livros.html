@@ -1,0 +1,30 @@
+{% extends 'enter/home.html' %}
+
+
+
+{% block content %}
+<div class="container col-12">
+    <div class="row">
+        {% for liv in livro  %}
+        
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                {% if liv.foto %}
+                <img src="{{liv.foto.url}}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{liv.nome}}</h5>
+                    <p class="card-text">{{liv.descricao}}</p>
+                    <a href="#" class="btn btn-primary">Abrir</a>
+                </div>     
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}
+
+
+
+            
+                

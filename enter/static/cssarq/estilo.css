@@ -1,0 +1,57 @@
+/* Css home.html */
+
+.barradepesquisa{
+    margin-top: 5px;
+}
+.nav-edit{
+    width: 100%
+}
+.nav-form-edit{
+    width: 400px !important;
+}
+
+.icone-user-nav{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px !important;
+   
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .footer{
+      background-color: rgba(0, 0, 0, .1);
+
+  }
+
+img{
+    max-height: 400px;
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+
+
+
+
+/*cadastro de usuarios*/
+
+
+.cadastro-usuario-edit{
+    padding: 40px;
+}
+/**/

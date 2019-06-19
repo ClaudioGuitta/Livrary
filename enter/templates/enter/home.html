@@ -1,0 +1,147 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--icones-->
+    <link rel="stylesheet" href="{% static 'fontawesome-free-5.8.2-web/css/all.css' %}">
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="{% static 'cssarq/estilo.css' %} ">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrapcdn.css' %}"> 
+    
+    
+    <title>EndGameLivraria</title>
+  </head>
+  <body>
+
+<main>
+  <!--nav bar-->
+<ul class="nav bg-light nav-edit">
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'livros' %}"><h4>End Game Livraria</h4></a>
+      </li>
+<!--
+      <li class="nav-item barradepesquisa ">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 nav-form-edit" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </li>
+-->
+      <li class="nav-item icone-user-nav">
+        <i class="fas fa-user-circle fa-2x text-primary" aria-hidden="true"></i> <a class="active text-primary" href="{% url 'cadastro_usuarios' %}">Cadastre-se/</a> <!--<a class="active text-primary" data-toggle="modal" data-target="#exampleModal" href="">login</a>--><!--Botão que ativa o Modal-->
+      </li>
+
+</ul>   
+
+<!--Modal inicio-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+<!--Form login-->
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Endereço de e-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+    <small id="emailHelp" class="form-text text-muted">Nós nunca vamos compartilhar seu e-mail com mais ninguém.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+<!--Fim do form login-->
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Modal fim-->
+
+
+<ul class="nav nav-pills nav-edit">
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="{% url 'livros' %}">Livros</a>
+    <a class="dropdown-item disabled" href="#">Jogos</a>
+    <a class="dropdown-item disabled" href="#">Downloads</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item disabled" href="#">Nada</a>
+  </div>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link disabled" href="{% url 'promocoes' %}">Promoções</a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">link</a>
+</li>
+</ul>
+<!--fim da nav-->
+<!--bloco para extender os templates-->
+  {% block content%}
+  {% endblock %}
+
+</main>
+<!-- Roda pé-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+
+        <div class="col col-lg3">
+            <h1 class="display-4">End Game Livraria</h1>
+            <p class="lead"></p>
+          </div>
+      
+          <div class="col-lg2 float-right center">
+            <ul>
+              <a href=""><i class="fab fa-git "></i></a>
+              <a href=""><i class="fab fa-facebook-square"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </ul>
+          </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- componentes js-->
+
+
+<script src="{% static 'bootstrap/popper.min.js' %}"  ></script>
+
+<script src="{% static 'bootstrap/jquery-3.3.1.slim.min.js' %}" ></script>
+
+<script src="{% static 'bootstrap/bootstrap.min.js' %}" ></script>
+
+
+  </body>
+</html>
